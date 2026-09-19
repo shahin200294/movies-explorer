@@ -29,16 +29,16 @@ const Navbar = () => {
             </div>
 
             <div className="flex justify-between items-center gap-20 ">
-                <div>
+                <div className="">
                     <ul className=" hidden md:flex list-none gap-6 ">
-                        <li><Link to={"/"}>Home</Link></li>
-                        <li><Link to={"/Movies"}>Movies</Link></li>
-                        <li><Link to={"/About"}>About</Link></li>
+                        <li><Link to={"/"} className="btn btn-ghost normal-case bg-amber-300">Home</Link></li>
+                        <li><Link to={"/Movies"} className="btn btn-ghost normal-case bg-amber-300">Movies</Link></li>
+                        {/* <li><Link to={"/About"}>About</Link></li> */}
                     </ul>
                 </div>
 
                 <div className=" lg:flex flex-none">
-                    <a className="btn btn-ghost normal-case">[ Browse Movies ]</a>
+                    <Link to={"/Movies"} className="btn btn-ghost normal-case bg-amber-300">[ Browse Movies ]</Link>
                 </div>
             </div>
         </div>
