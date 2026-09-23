@@ -37,7 +37,7 @@ const Home = () => {
                     {
                     movies.map((movies)=>(
                         <div>
-                            <MoviesCard movies={movies}/>
+                            <MoviesCard key={movies.id} movies={movies}/>
                         </div>
                     ))
                 }

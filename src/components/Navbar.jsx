@@ -18,7 +18,6 @@ const Navbar = () => {
                         <ul className=" md:hidden mt-4 flex flex-col gap-4 absolute top-full rounded-xl p-4 w-full bg-gray-700 opacity-95">
                         <li><Link to={"/"}>Home</Link></li>
                         <li><Link to={"/Movies"}>Movies</Link></li>
-                        <li><Link to={"/About"}>About</Link></li>
                     </ul>
                     )
                 }
@@ -33,7 +32,6 @@ const Navbar = () => {
                     <ul className=" hidden md:flex list-none gap-6 ">
                         <li><Link to={"/"} className="btn btn-ghost normal-case bg-amber-300">Home</Link></li>
                         <li><Link to={"/Movies"} className="btn btn-ghost normal-case bg-amber-300">Movies</Link></li>
-                        {/* <li><Link to={"/About"}>About</Link></li> */}
                     </ul>
                 </div>
 

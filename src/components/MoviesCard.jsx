@@ -1,7 +1,13 @@
+import { useState } from "react";
 
-import { Link } from "react-router";
+// import { Link } from "react-router";
 
 const MoviesCard = ({ movies }) => {
+
+    const [selectedMovie, setSelectedMovie]= useState();
+
+
+
     return (
         <div className="grid grid-cols-4">
             <div className=" card bg-base-100 w-96 shadow-sm">
@@ -16,9 +22,9 @@ const MoviesCard = ({ movies }) => {
                     <p>{movies.show.summary?.replace(/<[^>]*>/g, "").slice(0, 100)}</p>
 
                     <div className="card-actions">
-                        <Link to={"/Details:id"}>
-                            <button className="btn btn-ghost normal-case bg-amber-300">Show Details</button>
-                        </Link>
+                        {/* <Link to={"/Details:id"}> */}
+                            <button onClick={()=>setSelectedMovie(movies.show)} className="btn btn-ghost normal-case bg-amber-300">Show Details</button>
+                        {/* </Link> */}
                     </div>
                 </div>
             </div>
