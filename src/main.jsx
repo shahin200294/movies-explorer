@@ -25,16 +25,17 @@ const router = createBrowserRouter([
         Component: Movies,
         loader: async ()=>{
           const res = await fetch("https://api.tvmaze.com/search/shows?q=girls")
+        
 
           if(!res.ok){
             throw new Error("Could not found movies")
           }
 
-          return(res)
+          return(res.json())
         }
       },
       {
-        path: "/details:id",
+        path: "/details/:id",
         Component: Details,
         loader: async ()=>{
           const res = await fetch("https://api.tvmaze.com/search/shows?q=girls")
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
             throw new Error("Movie not found")
           }
 
-          return(res)
+          return(res.json())
         }
       },
     ]
